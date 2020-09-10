@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GADS 2020 Leaderboard</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="leaderboad">LEADERBOAD</string>
+    <string name="submit_btn">Submit</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="learning_hours">Learning Hours</string>
+    <string name="country" />
+    <string name="skill_iq_score">skill IQ Score</string>
+    <string name="project_sub_title">Project Submission</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="submission_not_successful">Submission not successful</string>
+</resources>
