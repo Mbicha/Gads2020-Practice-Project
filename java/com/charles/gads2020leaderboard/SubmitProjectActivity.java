@@ -47,7 +47,7 @@ public class SubmitProjectActivity extends AppCompatActivity {
         mBackArrowButton = findViewById(R.id.btn_back);
         mSubmit = findViewById(R.id.btn_submit_project);
         mEditFirstName = findViewById(R.id.edt_first_name);
-        mEditLastName = findViewById(R.id.edt_first_name);
+        mEditLastName = findViewById(R.id.edt_last_name);
         mEditEmail = findViewById(R.id.edt_email_address);
         mEditGithubLink = findViewById(R.id.edt_github_link);
 
