@@ -63,7 +63,7 @@ public class SubmitProjectActivity extends AppCompatActivity {
 
                     if (mEditFirstName.length() == 0){
 
-                            mEditFirstName.setError("Required");
+                        mEditFirstName.setError("Required");
                     }
                     else if (lname.length() == 0){
                         mEditLastName.setError("Required");
@@ -94,21 +94,20 @@ public class SubmitProjectActivity extends AppCompatActivity {
     private void subimtProject(String fname, String lname, String emailaddress, String git) {
 
         LearnersApi submitProject = ApiBuilder.submitPost(LearnersApi.class);
-        Call<ProjectSubmissionInfo> projectSubmissionRequest = submitProject.submitProject(fname, lname, emailaddress, git);
+        Call<Void> projectSubmissionRequest = submitProject.submitProject(fname, lname, emailaddress, git);
 
-        projectSubmissionRequest.enqueue(new Callback<ProjectSubmissionInfo>() {
+        projectSubmissionRequest.enqueue(new Callback<Void>() {
             @Override
-            public void onResponse(Call<ProjectSubmissionInfo> call, Response<ProjectSubmissionInfo> response) {
+            public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()){
                     successfulDialog();
-                    Toast.makeText(SubmitProjectActivity.this, "Successful", Toast.LENGTH_LONG).show();
+                    // Toast.makeText(SubmitProjectActivity.this, "Successful", Toast.LENGTH_LONG).show();
                 }
             }
 
             @Override
-            public void onFailure(Call<ProjectSubmissionInfo> call, Throwable t) {
+            public void onFailure(Call<Void> call, Throwable t) {
                 unsuccessfulDialog();
-                Toast.makeText(SubmitProjectActivity.this, "Faield to Submit", Toast.LENGTH_LONG).show();
             }
         });
 
